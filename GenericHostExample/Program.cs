@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 
 namespace GenericHostExample
 {
-    public partial class Program
+    public class Program
     {
         public static async Task Main(string[] args)
         {
@@ -14,7 +14,6 @@ namespace GenericHostExample
                 .ConfigureAppConfiguration((hostingContext, config) =>
                 {
                     config.AddJsonFile("appsettings.json", optional: true);
-
                     config.AddEnvironmentVariables();
 
                     if (args != null)
